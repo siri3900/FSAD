@@ -1,71 +1,95 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Product Table</title>
-    <style>
-        table {
-            width: 90%;
-            border-collapse: collapse;
-            text-align: center;
-            margin: 20px auto;
-            font-size: 20px;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 12px;
-        }
-        img {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-        }
-        button {
-            padding: 6px 14px;
-            font-size: 15px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <title>Product Table (Replica with Rupee Symbol)</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;   /* allow cellspacing */
+      border-spacing: 6px;         /* ✅ adds spacing between cells */
+      border: 2px solid #000;      /* ✅ outer border */
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 10px;               /* ✅ adds padding inside cells */
+      text-align: left;
+    }
+    th {
+      background: #f2f2f2;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+    .action-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #000;
+      background: #e6e6e6;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-
-<table>
-    <tr>
+  <table cellspacing="6" cellpadding="10"> <!-- ✅ HTML attributes also included -->
+    <thead>
+      <tr>
         <th>P_ID</th>
         <th>P_NAME</th>
         <th>P_COST</th>
         <th>P_IMAGE</th>
         <th>UPDATE</th>
         <th>DELETE</th>
-    </tr>
-
-    <tr>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td>111</td>
         <td>P_ONE</td>
-        <td>10000</td>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3kVUF86rU-_w5c-h3BhdjK7I-t_gKnrIGQ&s" alt="Flipkart"></td>
-        <td><button>UPDATE</button></td>
-        <td><button>DELETE</button></td>
-    </tr>
-
-    <tr>
+        <td>₹10000</td> <!-- ✅ Rupee symbol -->
+        <td>
+          <span class="logo">
+            <img src="https://up.yimg.com/ib/th/id/OIP.idB_-eo5pNgOG8Ker3jEpgHaEK?pid=Api&rs=1&c=1&qlt=95&w=203&h=114" alt="Flipkart logo">
+          </span>
+        </td>
+        <td><span class="action-btn">UPDATE</span></td>
+        <td><span class="action-btn">DELETE</span></td>
+      </tr>
+      <tr>
         <td>222</td>
         <td>P_TWO</td>
-        <td>20000</td>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYwZX26PU_56HZYDoLSKaPgCJWPVollJNjmg&s" alt="Amazon"></td>
-        <td><button>UPDATE</button></td>
-        <td><button>DELETE</button></td>
-    </tr>
-
-    <tr>
+        <td>₹20000</td> <!-- ✅ Rupee symbol -->
+        <td>
+          <span class="logo">
+            <img src="https://sp.yimg.com/ib/th/id/OIP.d8YLrwK0DObzmswyt28TWQHaHa?pid=Api&w=148&h=148&c=7&dpr=2&rs=1" alt="Amazon logo">
+          </span>
+        </td>
+        <td><span class="action-btn">UPDATE</span></td>
+        <td><span class="action-btn">DELETE</span></td>
+      </tr>
+      <tr>
         <td>333</td>
         <td>P_THREE</td>
-        <td>30000</td>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ0vc0hgelONOuuyS9XE7ouD-fPC-byaZGxA&s" alt="Myntra"></td>
-        <td><button>UPDATE</button></td>
-        <td><button>DELETE</button></td>
-    </tr>
-
-</table>
-
+        <td>₹30000</td> <!-- ✅ Rupee symbol -->
+        <td>
+          <span class="logo">
+            <img src="https://s.yimg.com/zb/imgv1/9660a32b-34de-3825-be4d-d32d8bdd7471/t_500x300" alt="Myntra logo">
+          </span>
+        </td>
+        <td><span class="action-btn">UPDATE</span></td>
+        <td><span class="action-btn">DELETE</span></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
-
